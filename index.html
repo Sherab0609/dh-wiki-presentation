@@ -346,18 +346,7 @@
     <section>
       <h2><span class="num">VI.</span>Iterative Development with AI</h2>
       <ul>
-        <li><strong>Phase 1:</strong> Ask AI to turn notes into wiki pages → organized, but not exam-ready</li>
-        <li><strong>Phase 2:</strong> Added an <em>exam argument template</em> to every core page
-          <ul>
-            <li>Opening thesis (one sentence you can say immediately)</li>
-            <li>Three-step deployment: anchor → develop → complicate &amp; land</li>
-            <li>Key terms that must appear &nbsp;·&nbsp; Anticipated follow-up questions</li>
-          </ul>
-        </li>
-        <li><strong>Phase 3:</strong> Designed <code>/exam</code> mock exam mode — three advisor personalities, six
-          command formats</li>
-        <li><strong>Phase 4:</strong> Built cross-field comparison pages for synthesis problems</li>
-        <li><strong>Phase 5:</strong> Automated reading-note processing pipeline
+        <li><strong>Phase 1:</strong> Automated reading-note processing pipeline
           <ul>
             <li><em>YAML auto-generation</em> — when a new note arrives without front matter, Claude generates a complete YAML block (citekey, author, year, field, topics, status, bibliography) rather than requiring manual entry</li>
             <li><em>Harvard Library Catalog integration</em> — Claude calls a custom skill to query HOLLIS and fill in the Chicago-style bibliography field automatically; falls back to note content if not found</li>
@@ -366,6 +355,16 @@
             <li><em>Automatic file renaming</em> — after citekey is confirmed, the file is immediately renamed to citekey.md; eliminates Notion's truncated-title + hex-string exports</li>
           </ul>
         </li>
+        <li><strong>Phase 2:</strong> Ask AI to turn notes into wiki pages → organized, but not exam-ready</li>
+        <li><strong>Phase 3:</strong> Added an <em>exam argument template</em> to every core page
+          <ul>
+            <li>Opening thesis (one sentence you can say immediately)</li>
+            <li>Three-step deployment: anchor → develop → complicate &amp; land</li>
+            <li>Key terms that must appear &nbsp;·&nbsp; Anticipated follow-up questions</li>
+          </ul>
+        </li>
+        <li><strong>Phase 4:</strong> Built cross-field comparison pages for synthesis problems</li>
+        <li><strong>Phase 5:</strong> Designed <code>/exam</code> mock exam mode — three advisor personalities, six command formats</li>
       </ul>
       <div class="demo-tag">Demo</div>
       <ul>
