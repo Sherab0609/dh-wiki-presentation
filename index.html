@@ -169,6 +169,41 @@
       font-style: italic;
     }
 
+    /* ── TOC ── */
+    .toc {
+      position: fixed;
+      top: 60px;
+      right: 24px;
+      width: 160px;
+      font-family: 'Georgia', serif;
+      font-size: 0.78rem;
+      line-height: 1.5;
+      color: #999999;
+    }
+
+    .toc a {
+      display: block;
+      color: #999999;
+      text-decoration: none;
+      padding: 2px 0 2px 10px;
+      border-left: 2px solid #e0e0e0;
+      margin-bottom: 4px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .toc a:hover {
+      color: #444444;
+    }
+
+    .toc a.active {
+      color: #111111;
+      border-left-color: #111111;
+    }
+
+    @media (max-width: 1080px) {
+      .toc { display: none; }
+    }
+
     /* ── Footer ── */
     footer {
       margin-top: 3rem;
@@ -182,6 +217,18 @@
 </head>
 
 <body>
+  <nav class="toc">
+    <a href="#s1">I. Background</a>
+    <a href="#s2">II. Tool Stack</a>
+    <a href="#s3">III. Codex → Claude</a>
+    <a href="#s4">IV. Raw Material</a>
+    <a href="#s5">V. Architecture</a>
+    <a href="#s6">VI. Development</a>
+    <a href="#s7">VII. Challenges</a>
+    <a href="#s8">VIII. Reflections</a>
+    <a href="#s9">IX. Takeaways</a>
+  </nav>
+
   <div class="container">
 
     <header>
@@ -190,7 +237,7 @@
     </header>
 
     <!-- I -->
-    <section>
+    <section id="s1">
       <h2><span class="num">I.</span>Background &amp; Motivation</h2>
       <ul>
         <li>General Exam: 3 fields, 220+ sources, cross-linguistic materials (English / Chinese / Tibetan / Sanskrit)</li>
@@ -219,7 +266,7 @@
     </section>
 
     <!-- II -->
-    <section>
+    <section id="s2">
       <h2><span class="num">II.</span>Why This Tool Stack</h2>
       <ul>
         <li>A multi-tool system — each tool does a different job:</li>
@@ -267,7 +314,7 @@
     </section>
 
     <!-- III -->
-    <section>
+    <section id="s3">
       <h2><span class="num">III.</span>Getting Here: From Codex to Claude</h2>
       <ul>
         <li>Started with <strong>Codex</strong> — taught in class so convenient to use, and free with the Harvard account</li>
@@ -292,7 +339,7 @@
     </section>
 
     <!-- IV -->
-    <section>
+    <section id="s4">
       <h2><span class="num">IV.</span>The Raw Material</h2>
       <ul>
         <li>Input is <strong>my reading notes and topic notes</strong> — they already embed interpretive decisions (what matters, where the tensions are, how sources speak to each other), so AI is working with pre-interpreted material, not extracting patterns from raw text</li>
@@ -320,7 +367,7 @@
     </section>
 
     <!-- V -->
-    <section>
+    <section id="s5">
       <h2><span class="num">V.</span>Wiki Architecture</h2>
       <div class="demo-tag">Demo</div>
       <ul>
@@ -341,7 +388,7 @@
     </section>
 
     <!-- VI -->
-    <section>
+    <section id="s6">
       <h2><span class="num">VI.</span>Iterative Development with AI</h2>
       <ul>
         <li><strong>Phase 1:</strong> Automated reading-note processing pipeline
@@ -372,7 +419,7 @@
     </section>
 
     <!-- VII -->
-    <section>
+    <section id="s7">
       <h2><span class="num">VII.</span>Challenges &amp; Solutions</h2>
       <table>
         <tr>
@@ -403,7 +450,7 @@
     </section>
 
     <!-- VIII -->
-    <section>
+    <section id="s8">
       <h2><span class="num">VIII.</span>Reflections: Advantages &amp; Limitations</h2>
       <ul>
         <li><strong>Advantages</strong>
@@ -428,7 +475,7 @@
     </section>
 
     <!-- IX -->
-    <section>
+    <section id="s9">
       <h2><span class="num">IX.</span>Takeaways</h2>
       <ul>
         <li>AI can carry more than data — it can carry thinking logic, exam logic, and advisor logic, if the system is designed to encode them; this project is an attempt to find out how far that goes</li>
@@ -441,6 +488,23 @@
 
 
   </div>
+
+  <script>
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('.toc a');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(a => a.classList.remove('active'));
+          const active = document.querySelector(`.toc a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    sections.forEach(s => observer.observe(s));
+  </script>
 </body>
 
 </html>
