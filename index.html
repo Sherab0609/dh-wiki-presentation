@@ -235,6 +235,10 @@
           <td>Primary database — connected to other Notion databases; table, filter, and relational features I still rely on</td>
         </tr>
         <tr>
+          <td>Claude Project</td>
+          <td>Note-taking stage — set up with exam background, full bibliography, and note requirements as persistent context; used for chapter selection guidance, note feedback, and revision before notes are exported</td>
+        </tr>
+        <tr>
           <td>Claude Code</td>
           <td>
             <ul style="margin:0; padding-left:1.2rem; list-style:disc;">
@@ -321,16 +325,19 @@
       <h2><span class="num">V.</span>Wiki Architecture</h2>
       <div class="demo-tag">Demo</div>
       <ul>
-        <li><code>raw/reading-notes/</code> — original reading notes, preserved as-is</li>
-        <li><code>wiki/topics/</code> — pages on sects, figures, historical events</li>
-        <li><code>wiki/concepts/</code> — cross-textual analytical concepts</li>
-        <li><code>wiki/cross_field/</code> — systematic cross-field comparative arguments</li>
-        <li><code>AGENTS.md</code> — instructions telling Claude how to behave in this workspace</li>
+        <li><code>raw/reading-notes/</code> — source notes (one per text, named by citekey)</li>
+        <li><code>raw/topic-notes/</code> — thematic notes that synthesize across multiple sources</li>
+        <li><code>wiki/topics/</code> — what I'm studying: sects, figures, institutions, historical events</li>
+        <li><code>wiki/concepts/</code> — analytical tools: theoretical frameworks and mechanisms used to explain the topics</li>
+        <li><code>wiki/debates/</code> — scholarly disagreements with named positions and stakes</li>
+        <li><code>wiki/methodology/</code> — one page per scholar: how they work, what their method can and cannot do</li>
+        <li><code>wiki/questions/</code> — my own open questions, linked to relevant topics and debates</li>
+        <li><code>wiki/cross_field/</code> — systematic cross-field comparative arguments, built for synthesis questions</li>
+        <li><code>AGENTS.md</code> — persistent ruleset telling Claude how to behave in this workspace</li>
       </ul>
       <ul style="margin-top:14px">
-        <li>Topics = content nodes &nbsp;·&nbsp; Concepts = analytical tools &nbsp;·&nbsp; Cross-field = exam-ready
-          synthesis</li>
-        <li>Keeping them separate allows flexible recombination when answering questions</li>
+        <li>The separation maps directly onto the three logics from Section I: <em>topics</em> = what the exam asks about; <em>concepts + methodology</em> = the analytical vocabulary I bring to it; <em>cross_field</em> = where exam logic and advisor logic are encoded as ready-to-deploy synthesis</li>
+        <li>Keeping them separate means any combination is possible on demand — a question about sacred geography can draw from topics, concepts, methodology, and cross_field simultaneously without any single page needing to contain everything</li>
       </ul>
     </section>
 
@@ -379,12 +386,12 @@
           <td>Human verification at every stage; I review every page AI generates before it enters the wiki</td>
         </tr>
         <tr>
-          <td>AI cannot always pinpoint the right material when the request is a thinking problem, not a precise query — "find sources related to this line of reasoning" leaves wide interpretive room; what gets pulled in may be adjacent but not exactly what the argument needs</td>
-          <td>Regular review cycles: go back through wiki pages, check whether the logic holds, fill gaps, and revise — the wiki improves through use, not just through generation</td>
-        </tr>
-        <tr>
           <td>AI structures my misreadings and makes them look authoritative</td>
           <td>When errors caught, correct the source note first, then update the wiki — fixing at the root, not just the surface</td>
+        </tr>
+        <tr>
+          <td>AI cannot always pinpoint the right material when the request is a thinking problem, not a precise query — "find sources related to this line of reasoning" leaves wide interpretive room; what gets pulled in may be adjacent but not exactly what the argument needs</td>
+          <td>Regular review cycles: go back through wiki pages, check whether the logic holds, fill gaps, and revise — the wiki improves through use, not just through generation</td>
         </tr>
         <tr>
           <td>Didn't know which direction to prepare</td>
