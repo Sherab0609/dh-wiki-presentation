@@ -332,6 +332,15 @@
         <li><strong>Phase 3:</strong> Designed <code>/exam</code> mock exam mode — three advisor personalities, six
           command formats</li>
         <li><strong>Phase 4:</strong> Built cross-field comparison pages for synthesis problems</li>
+        <li><strong>Phase 5:</strong> Automated reading-note processing pipeline
+          <ul>
+            <li><em>YAML auto-generation</em> — when a new note arrives without front matter, Claude generates a complete YAML block (citekey, author, year, field, topics, status, bibliography) rather than requiring manual entry</li>
+            <li><em>Harvard Library Catalog integration</em> — Claude calls a custom skill to query HOLLIS and fill in the Chicago-style bibliography field automatically; falls back to note content if not found</li>
+            <li><em>Citekey rules</em> — modern scholars: LastName+Year (e.g., Davidson2005); classical texts: conventional abbreviation or translator+year (e.g., HZSJ, Roerich1949); if year unknown: LastName+n.d.</li>
+            <li><em>Topic enrichment</em> — Claude doesn't just copy the original Notion tags; it reads the full note and adds related historical, religious, and methodological topics the tags missed</li>
+            <li><em>Automatic file renaming</em> — after citekey is confirmed, the file is immediately renamed to citekey.md; eliminates Notion's truncated-title + hex-string exports</li>
+          </ul>
+        </li>
       </ul>
       <div class="demo-tag">Demo</div>
       <ul>
