@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI-Assisted Exam Prep — DH Presentation</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: 'Georgia', serif;
-      background: #0f1117;
-      color: #e2e8f0;
+      background: #ffffff;
+      color: #1a1a1a;
       line-height: 1.8;
       padding: 60px 20px;
     }
@@ -21,7 +26,7 @@
     }
 
     header {
-      border-bottom: 1px solid #2d3748;
+      border-bottom: 1px solid #d0d0d0;
       padding-bottom: 32px;
       margin-bottom: 48px;
     }
@@ -29,13 +34,13 @@
     header h1 {
       font-size: 1.9rem;
       font-weight: normal;
-      color: #f7fafc;
+      color: #111111;
       line-height: 1.3;
       margin-bottom: 12px;
     }
 
     header p {
-      color: #718096;
+      color: #555555;
       font-size: 0.95rem;
       font-style: italic;
     }
@@ -48,14 +53,14 @@
       font-size: 0.78rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #63b3ed;
+      color: #1a6fc4;
       margin-bottom: 20px;
       font-family: 'Helvetica Neue', sans-serif;
       font-weight: 600;
     }
 
     h2 span.num {
-      color: #2d3748;
+      color: #999999;
       margin-right: 8px;
     }
 
@@ -67,7 +72,7 @@
     ul li {
       padding: 5px 0 5px 18px;
       position: relative;
-      color: #cbd5e0;
+      color: #222222;
       font-size: 0.97rem;
     }
 
@@ -75,7 +80,7 @@
       content: "—";
       position: absolute;
       left: 0;
-      color: #4a5568;
+      color: #999999;
     }
 
     ul li ul {
@@ -85,29 +90,29 @@
 
     ul li ul li {
       font-size: 0.91rem;
-      color: #a0aec0;
+      color: #444444;
     }
 
     ul li ul li::before {
       content: "·";
-      color: #4a5568;
+      color: #999999;
     }
 
     .highlight {
-      background: #1a202c;
-      border-left: 3px solid #63b3ed;
+      background: #f0f4f8;
+      border-left: 3px solid #1a6fc4;
       padding: 14px 20px;
       margin: 20px 0;
       border-radius: 0 6px 6px 0;
       font-size: 0.95rem;
-      color: #e2e8f0;
+      color: #222222;
       font-style: italic;
     }
 
     .demo-tag {
       display: inline-block;
-      background: #2d3748;
-      color: #68d391;
+      background: #e8f5e9;
+      color: #2e7d32;
       font-family: 'Helvetica Neue', sans-serif;
       font-size: 0.72rem;
       letter-spacing: 0.08em;
@@ -127,23 +132,23 @@
     th {
       text-align: left;
       padding: 8px 12px;
-      color: #718096;
+      color: #555555;
       font-family: 'Helvetica Neue', sans-serif;
       font-size: 0.78rem;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      border-bottom: 1px solid #2d3748;
+      border-bottom: 1px solid #d0d0d0;
     }
 
     td {
       padding: 10px 12px;
-      border-bottom: 1px solid #1a202c;
-      color: #cbd5e0;
+      border-bottom: 1px solid #e8e8e8;
+      color: #222222;
       vertical-align: top;
     }
 
     td:first-child {
-      color: #fc8181;
+      color: #c0392b;
       font-style: italic;
       white-space: nowrap;
     }
@@ -151,183 +156,200 @@
     footer {
       margin-top: 64px;
       padding-top: 24px;
-      border-top: 1px solid #2d3748;
-      color: #4a5568;
+      border-top: 1px solid #d0d0d0;
+      color: #777777;
       font-size: 0.82rem;
       font-family: 'Helvetica Neue', sans-serif;
     }
   </style>
 </head>
+
 <body>
-<div class="container">
+  <div class="container">
 
-  <header>
-    <h1>Building an AI-Assisted Exam Preparation System<br>with Claude Code</h1>
-    <p>Digital Humanities for East Asian Studies &nbsp;·&nbsp; Spring 2026</p>
-  </header>
+    <header>
+      <h1>Building an AI-Assisted Exam Preparation System<br>with Claude Code</h1>
+      <p>Digital Humanities for East Asian Studies &nbsp;·&nbsp; Spring 2026</p>
+    </header>
 
-  <!-- I -->
-  <section>
-    <h2><span class="num">I.</span>Background &amp; Motivation</h2>
-    <ul>
-      <li>General Exam challenge: 3 fields, 50+ articles, cross-linguistic materials (Chinese / Tibetan / English)</li>
-      <li>Expected to synthesize across fields on the spot, in real time</li>
-      <li>Problem with conventional note-taking: records content, but the structure doesn't support <em>deploying arguments under exam conditions</em></li>
-      <li>Goal: a knowledge system that is directly actionable in exam settings — not just content storage</li>
-    </ul>
-  </section>
+    <!-- I -->
+    <section>
+      <h2><span class="num">I.</span>Background &amp; Motivation</h2>
+      <ul>
+        <li>General Exam challenge: 3 fields, 50+ articles, cross-linguistic materials (Chinese / Tibetan / English)
+        </li>
+        <li>Expected to synthesize across fields on the spot, in real time</li>
+        <li>Problem with conventional note-taking: records content, but the structure doesn't support <em>deploying
+            arguments under exam conditions</em></li>
+        <li>Goal: a knowledge system that is directly actionable in exam settings — not just content storage</li>
+      </ul>
+    </section>
 
-  <!-- II -->
-  <section>
-    <h2><span class="num">II.</span>Why This Tool Stack</h2>
-    <ul>
-      <li><strong>Claude Code + markdown flat files</strong> — not Notion, Obsidian, or a database</li>
-      <li>Why:
-        <ul>
-          <li>AI can read and write files directly, no intermediary layer</li>
-          <li>Git version control: every edit is traceable</li>
-          <li>Structure defined by me, not pre-imposed by the tool</li>
-        </ul>
-      </li>
-      <li>This choice is itself a DH question: <em>how does the form of a tool shape how knowledge gets organized?</em></li>
-    </ul>
-  </section>
+    <!-- II -->
+    <section>
+      <h2><span class="num">II.</span>Why This Tool Stack</h2>
+      <ul>
+        <li><strong>Claude Code + markdown flat files</strong> — not Notion, Obsidian, or a database</li>
+        <li>Why:
+          <ul>
+            <li>AI can read and write files directly, no intermediary layer</li>
+            <li>Git version control: every edit is traceable</li>
+            <li>Structure defined by me, not pre-imposed by the tool</li>
+          </ul>
+        </li>
+        <li>This choice is itself a DH question: <em>how does the form of a tool shape how knowledge gets
+            organized?</em></li>
+      </ul>
+    </section>
 
-  <!-- III -->
-  <section>
-    <h2><span class="num">III.</span>Getting Here: From Codex to Claude</h2>
-    <ul>
-      <li>Started with <strong>Codex</strong> — what was taught in class, so the natural starting point</li>
-      <li>Methodology felt right: feed notes → AI extracts and organizes → knowledge base</li>
-      <li>The problem: no matter how much I adjusted, rewrote rules, refined prompts — output was surface-level and random
-        <ul>
-          <li>My notes have many layers: arguments, debates, methodological moves, cross-text connections</li>
-          <li>Codex consistently only picked up the most obvious, most generic content</li>
-          <li>Spent significant time on prompt engineering — but couldn't trust what came out</li>
-        </ul>
-      </li>
-      <li>Conclusion: <em>my methodology isn't wrong — maybe it's the AI</em></li>
-      <li>Switched to Claude, using the exact same approach</li>
-      <li>One run in — immediately knew this was something I could actually use</li>
-    </ul>
-    <div class="demo-tag">Demo</div>
-    <ul><li>Side-by-side comparison: Codex output vs. Claude output on the same notes</li></ul>
-  </section>
+    <!-- III -->
+    <section>
+      <h2><span class="num">III.</span>Getting Here: From Codex to Claude</h2>
+      <ul>
+        <li>Started with <strong>Codex</strong> — what was taught in class, so the natural starting point</li>
+        <li>Methodology felt right: feed notes → AI extracts and organizes → knowledge base</li>
+        <li>The problem: no matter how much I adjusted, rewrote rules, refined prompts — output was surface-level and
+          random
+          <ul>
+            <li>My notes have many layers: arguments, debates, methodological moves, cross-text connections</li>
+            <li>Codex consistently only picked up the most obvious, most generic content</li>
+            <li>Spent significant time on prompt engineering — but couldn't trust what came out</li>
+          </ul>
+        </li>
+        <li>Conclusion: <em>my methodology isn't wrong — maybe it's the AI</em></li>
+        <li>Switched to Claude, using the exact same approach</li>
+        <li>One run in — immediately knew this was something I could actually use</li>
+      </ul>
+      <div class="demo-tag">Demo</div>
+      <ul>
+        <li>Side-by-side comparison: Codex output vs. Claude output on the same notes</li>
+      </ul>
+    </section>
 
-  <!-- IV -->
-  <section>
-    <h2><span class="num">IV.</span>The Raw Material</h2>
-    <ul>
-      <li>Not a text corpus — input is <strong>reading notes I wrote</strong> after engaging with each source</li>
-      <li>Notes already embed interpretive decisions: what matters, who it's in dialogue with, my questions</li>
-      <li>Key difference from corpus-based DH projects: <strong>AI is working with pre-interpreted material</strong>, not extracting patterns from raw text</li>
-      <li>Multilingual by nature: notes mix Chinese, English, and Tibetan</li>
-    </ul>
-  </section>
+    <!-- IV -->
+    <section>
+      <h2><span class="num">IV.</span>The Raw Material</h2>
+      <ul>
+        <li>Not a text corpus — input is <strong>reading notes I wrote</strong> after engaging with each source</li>
+        <li>Notes already embed interpretive decisions: what matters, who it's in dialogue with, my questions</li>
+        <li>Key difference from corpus-based DH projects: <strong>AI is working with pre-interpreted material</strong>,
+          not extracting patterns from raw text</li>
+        <li>Multilingual by nature: notes mix Chinese, English, and Tibetan</li>
+      </ul>
+    </section>
 
-  <!-- V -->
-  <section>
-    <h2><span class="num">V.</span>Wiki Architecture</h2>
-    <div class="demo-tag">Demo</div>
-    <ul>
-      <li><code>raw/reading-notes/</code> — original reading notes, preserved as-is</li>
-      <li><code>wiki/topics/</code> — pages on sects, figures, historical events</li>
-      <li><code>wiki/concepts/</code> — cross-textual analytical concepts</li>
-      <li><code>wiki/cross_field/</code> — systematic cross-field comparative arguments</li>
-      <li><code>AGENTS.md</code> — instructions telling Claude how to behave in this workspace</li>
-    </ul>
-    <ul style="margin-top:14px">
-      <li>Topics = content nodes &nbsp;·&nbsp; Concepts = analytical tools &nbsp;·&nbsp; Cross-field = exam-ready synthesis</li>
-      <li>Keeping them separate allows flexible recombination when answering questions</li>
-    </ul>
-  </section>
+    <!-- V -->
+    <section>
+      <h2><span class="num">V.</span>Wiki Architecture</h2>
+      <div class="demo-tag">Demo</div>
+      <ul>
+        <li><code>raw/reading-notes/</code> — original reading notes, preserved as-is</li>
+        <li><code>wiki/topics/</code> — pages on sects, figures, historical events</li>
+        <li><code>wiki/concepts/</code> — cross-textual analytical concepts</li>
+        <li><code>wiki/cross_field/</code> — systematic cross-field comparative arguments</li>
+        <li><code>AGENTS.md</code> — instructions telling Claude how to behave in this workspace</li>
+      </ul>
+      <ul style="margin-top:14px">
+        <li>Topics = content nodes &nbsp;·&nbsp; Concepts = analytical tools &nbsp;·&nbsp; Cross-field = exam-ready
+          synthesis</li>
+        <li>Keeping them separate allows flexible recombination when answering questions</li>
+      </ul>
+    </section>
 
-  <!-- VI -->
-  <section>
-    <h2><span class="num">VI.</span>Iterative Development with AI</h2>
-    <ul>
-      <li><strong>Phase 1:</strong> Ask AI to turn notes into wiki pages → organized, but not exam-ready</li>
-      <li><strong>Phase 2:</strong> Added an <em>exam argument template</em> to every core page
-        <ul>
-          <li>Opening thesis (one sentence you can say immediately)</li>
-          <li>Three-step deployment: anchor → develop → complicate &amp; land</li>
-          <li>Key terms that must appear &nbsp;·&nbsp; Anticipated follow-up questions</li>
-        </ul>
-      </li>
-      <li><strong>Phase 3:</strong> Designed <code>/exam</code> mock exam mode — three advisor personalities, six command formats</li>
-      <li><strong>Phase 4:</strong> Built cross-field comparison pages for synthesis problems</li>
-    </ul>
-    <div class="demo-tag">Demo</div>
-    <ul>
-      <li>Open a wiki page → show exam argument template</li>
-      <li>Run <code>/exam field2 sectarian boundaries</code> live</li>
-    </ul>
-  </section>
+    <!-- VI -->
+    <section>
+      <h2><span class="num">VI.</span>Iterative Development with AI</h2>
+      <ul>
+        <li><strong>Phase 1:</strong> Ask AI to turn notes into wiki pages → organized, but not exam-ready</li>
+        <li><strong>Phase 2:</strong> Added an <em>exam argument template</em> to every core page
+          <ul>
+            <li>Opening thesis (one sentence you can say immediately)</li>
+            <li>Three-step deployment: anchor → develop → complicate &amp; land</li>
+            <li>Key terms that must appear &nbsp;·&nbsp; Anticipated follow-up questions</li>
+          </ul>
+        </li>
+        <li><strong>Phase 3:</strong> Designed <code>/exam</code> mock exam mode — three advisor personalities, six
+          command formats</li>
+        <li><strong>Phase 4:</strong> Built cross-field comparison pages for synthesis problems</li>
+      </ul>
+      <div class="demo-tag">Demo</div>
+      <ul>
+        <li>Open a wiki page → show exam argument template</li>
+        <li>Run <code>/exam field2 sectarian boundaries</code> live</li>
+      </ul>
+    </section>
 
-  <!-- VII -->
-  <section>
-    <h2><span class="num">VII.</span>Challenges &amp; Solutions</h2>
-    <table>
-      <tr><th>Challenge</th><th>Solution</th></tr>
-      <tr>
-        <td>AI synthesis distorted nuanced arguments</td>
-        <td>Built in human verification; I review every page AI generates</td>
-      </tr>
-      <tr>
-        <td>AI structures my misreadings and makes them look authoritative</td>
-        <td>When errors caught, correct notes and update wiki immediately</td>
-      </tr>
-      <tr>
-        <td>Didn't know which direction to prepare</td>
-        <td>Incorporated advisor profiles — different argument structures for different examiners</td>
-      </tr>
-      <tr>
-        <td>Cross-field synthesis is hard to systematize</td>
-        <td>Dedicated cross-field pages with comparison matrices</td>
-      </tr>
-    </table>
-  </section>
+    <!-- VII -->
+    <section>
+      <h2><span class="num">VII.</span>Challenges &amp; Solutions</h2>
+      <table>
+        <tr>
+          <th>Challenge</th>
+          <th>Solution</th>
+        </tr>
+        <tr>
+          <td>AI synthesis distorted nuanced arguments</td>
+          <td>Built in human verification; I review every page AI generates</td>
+        </tr>
+        <tr>
+          <td>AI structures my misreadings and makes them look authoritative</td>
+          <td>When errors caught, correct notes and update wiki immediately</td>
+        </tr>
+        <tr>
+          <td>Didn't know which direction to prepare</td>
+          <td>Incorporated advisor profiles — different argument structures for different examiners</td>
+        </tr>
+        <tr>
+          <td>Cross-field synthesis is hard to systematize</td>
+          <td>Dedicated cross-field pages with comparison matrices</td>
+        </tr>
+      </table>
+    </section>
 
-  <!-- VIII -->
-  <section>
-    <h2><span class="num">VIII.</span>Reflections: Advantages &amp; Limitations</h2>
-    <ul>
-      <li><strong>Advantages</strong>
-        <ul>
-          <li>Pre-interpreted data — AI output is immediately usable</li>
-          <li>Tight, continuous human-AI loop — not one-directional tool use</li>
-          <li>Clear evaluation criterion: does it hold up in the advisor meeting?</li>
-        </ul>
-      </li>
-      <li><strong>Limitations</strong>
-        <ul>
-          <li>N=1 — depends entirely on the quality of my notes, not generalizable</li>
-          <li>AI cannot verify sources: a beautifully structured error is still an error</li>
-          <li>What's "digitized" is a cognitive process, not a text corpus — no shareable dataset</li>
-        </ul>
-      </li>
-    </ul>
-    <div class="highlight">
-      Most DH projects have AI find patterns in external texts, and humans interpret the results.
-      This project inverts that: I interpret first, AI structures my interpretations, then AI stress-tests them.
-      This isn't corpus analysis — it's <strong>cognitive scaffolding</strong>. Does that count as DH?
-    </div>
-  </section>
+    <!-- VIII -->
+    <section>
+      <h2><span class="num">VIII.</span>Reflections: Advantages &amp; Limitations</h2>
+      <ul>
+        <li><strong>Advantages</strong>
+          <ul>
+            <li>Pre-interpreted data — AI output is immediately usable</li>
+            <li>Tight, continuous human-AI loop — not one-directional tool use</li>
+            <li>Clear evaluation criterion: does it hold up in the advisor meeting?</li>
+          </ul>
+        </li>
+        <li><strong>Limitations</strong>
+          <ul>
+            <li>N=1 — depends entirely on the quality of my notes, not generalizable</li>
+            <li>AI cannot verify sources: a beautifully structured error is still an error</li>
+            <li>What's "digitized" is a cognitive process, not a text corpus — no shareable dataset</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="highlight">
+        Most DH projects have AI find patterns in external texts, and humans interpret the results.
+        This project inverts that: I interpret first, AI structures my interpretations, then AI stress-tests them.
+        This isn't corpus analysis — it's <strong>cognitive scaffolding</strong>. Does that count as DH?
+      </div>
+    </section>
 
-  <!-- IX -->
-  <section>
-    <h2><span class="num">IX.</span>Takeaways</h2>
-    <ul>
-      <li>Structuring knowledge for AI is itself a form of knowledge production — the process surfaces things I thought I understood but couldn't actually articulate</li>
-      <li>AI as <em>thinking partner</em> vs. <em>data processor</em> — two distinct modes of human-AI collaboration; the second is underrepresented in DH discourse</li>
-      <li>An epistemological question the project raised: when you structure your knowledge so AI can help you navigate it, does that change what "knowing" means?</li>
-    </ul>
-  </section>
+    <!-- IX -->
+    <section>
+      <h2><span class="num">IX.</span>Takeaways</h2>
+      <ul>
+        <li>Structuring knowledge for AI is itself a form of knowledge production — the process surfaces things I
+          thought I understood but couldn't actually articulate</li>
+        <li>AI as <em>thinking partner</em> vs. <em>data processor</em> — two distinct modes of human-AI collaboration;
+          the second is underrepresented in DH discourse</li>
+        <li>An epistemological question the project raised: when you structure your knowledge so AI can help you
+          navigate it, does that change what "knowing" means?</li>
+      </ul>
+    </section>
 
-  <footer>
-    Timing: ~8 min talk &nbsp;·&nbsp; ~4 min demo &nbsp;·&nbsp; ~3 min Q&amp;A
-  </footer>
+    <footer>
+      Timing: ~8 min talk &nbsp;·&nbsp; ~4 min demo &nbsp;·&nbsp; ~3 min Q&amp;A
+    </footer>
 
-</div>
+  </div>
 </body>
+
 </html>
