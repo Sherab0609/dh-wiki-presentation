@@ -376,11 +376,15 @@
         </tr>
         <tr>
           <td>AI synthesis distorted nuanced arguments</td>
-          <td>Built in human verification; I review every page AI generates</td>
+          <td>Human verification at every stage; I review every page AI generates before it enters the wiki</td>
+        </tr>
+        <tr>
+          <td>AI cannot always pinpoint the right material when the request is a thinking problem, not a precise query — "find sources related to this line of reasoning" leaves wide interpretive room; what gets pulled in may be adjacent but not exactly what the argument needs</td>
+          <td>Regular review cycles: go back through wiki pages, check whether the logic holds, fill gaps, and revise — the wiki improves through use, not just through generation</td>
         </tr>
         <tr>
           <td>AI structures my misreadings and makes them look authoritative</td>
-          <td>When errors caught, correct notes and update wiki immediately</td>
+          <td>When errors caught, correct the source note first, then update the wiki — fixing at the root, not just the surface</td>
         </tr>
         <tr>
           <td>Didn't know which direction to prepare</td>
@@ -399,16 +403,19 @@
       <ul>
         <li><strong>Advantages</strong>
           <ul>
-            <li>Pre-interpreted data — AI output is immediately usable</li>
-            <li>Tight, continuous human-AI loop — not one-directional tool use</li>
-            <li>Clear evaluation criterion: does it hold up in the advisor meeting?</li>
+            <li>Because input is pre-interpreted, AI output directly reflects argument logic — not generic summaries extracted from raw text</li>
+            <li>Human-AI loop runs at every stage: chapter selection → note feedback → wiki generation → mock exam → review and revision; AI is never operating alone</li>
+            <li>Advisor personalities are encoded — mock exam sessions are calibrated to specific intellectual styles, not generic "practice questions"</li>
+            <li><code>AGENTS.md</code> as a persistent ruleset: consistent behavior across sessions, with built-in anti-hallucination protocols and source-tracing requirements</li>
+            <li>Clear quality criterion at every stage: does the output survive advisor-style pushback in a mock session?</li>
           </ul>
         </li>
         <li><strong>Limitations</strong>
           <ul>
-            <li>N=1 — depends entirely on the quality of my notes, not generalizable</li>
-            <li>AI cannot verify sources: a beautifully structured error is still an error</li>
-            <li>What's "digitized" is a cognitive process, not a text corpus — no shareable dataset</li>
+            <li>N=1 — output quality depends entirely on the quality of my notes; the system cannot compensate for a weak or misread source</li>
+            <li>AI cannot verify sources independently: a well-structured error is harder to catch than an obvious one — the anti-hallucination protocol in <code>AGENTS.md</code> reduces but does not eliminate this</li>
+            <li>When requests are reasoning problems rather than precise queries, AI selection has significant interpretive latitude — requires ongoing human review to catch misalignments</li>
+            <li>What is "digitized" here is a cognitive process, not a text corpus — there is no shareable dataset, no reproducible pipeline independent of my specific notes and thinking</li>
           </ul>
         </li>
       </ul>
