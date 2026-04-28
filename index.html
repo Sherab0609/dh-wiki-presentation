@@ -208,16 +208,33 @@
     <section>
       <h2><span class="num">II.</span>Why This Tool Stack</h2>
       <ul>
-        <li><strong>Claude Code + markdown flat files</strong> — not Notion, Obsidian, or a database</li>
-        <li>Why:
-          <ul>
-            <li>AI can read and write files directly, no intermediary layer</li>
-            <li>Git version control: every edit is traceable</li>
-            <li>Structure defined by me, not pre-imposed by the tool</li>
-          </ul>
-        </li>
-        <li>This choice is itself a DH question: <em>how does the form of a tool shape how knowledge gets
-            organized?</em></li>
+        <li>A multi-tool system — each tool does a different job:</li>
+      </ul>
+      <table>
+        <tr>
+          <th>Tool</th>
+          <th>Role</th>
+        </tr>
+        <tr>
+          <td>Notion</td>
+          <td>Primary database — connected to other Notion databases; table, filter, and relational features I still rely on</td>
+        </tr>
+        <tr>
+          <td>Claude Code</td>
+          <td>Builds and modifies the wiki (reads/writes markdown files directly, no intermediary layer needed)</td>
+        </tr>
+        <tr>
+          <td>Obsidian</td>
+          <td>Views the wiki Claude Code generates — graph view, internal links, local file browsing</td>
+        </tr>
+        <tr>
+          <td>Git</td>
+          <td>Version control — every edit is traceable; connects to GitHub for backup and sharing</td>
+        </tr>
+      </table>
+      <ul>
+        <li>The key decision: markdown flat files as the <em>synthesis layer</em> — format that both AI and humans can read and write directly, without being locked into any single platform's structure</li>
+        <li>This choice is itself a DH question: <em>how does the form of a tool shape how knowledge gets organized?</em></li>
       </ul>
     </section>
 
