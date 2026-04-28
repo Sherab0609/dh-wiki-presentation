@@ -260,6 +260,12 @@
         <li>The key decision: markdown flat files as the <em>synthesis layer</em> — format that both AI and humans can read and write directly, without being locked into any single platform's structure</li>
         <li>Choosing markdown over a database means the structure of knowledge is determined by <em>argument logic</em>, not platform schema — the wiki looks the way it does because of how I think, not because of what Notion's columns allow</li>
       </ul>
+      <p style="margin: 1rem 0 0.4rem; font-style: italic; color: #555555; font-size: 0.92rem;">Why not simply upload notes to Claude Project as files?</p>
+      <ul>
+        <li>Claude Project treats files as a static corpus — Claude queries them, but they don't change, and the connections inferred in one session don't carry over to the next</li>
+        <li>The wiki is a designed system: the logic of how knowledge is organized is built by me, not inferred on the fly; rules encoded in <code>AGENTS.md</code> persist and can be updated as the project evolves; insights from mock exam sessions get written back into the wiki pages</li>
+        <li>The system improves through use. Claude Project is a better search interface over your notes. This is something else.</li>
+      </ul>
     </section>
 
     <!-- III -->
@@ -422,7 +428,7 @@
             <li>AI cannot verify sources independently: a well-structured error is harder to catch than an obvious one — the anti-hallucination protocol in <code>AGENTS.md</code> reduces but does not eliminate this</li>
             <li>When requests are reasoning problems rather than precise queries, AI selection has significant interpretive latitude — requires ongoing human review to catch misalignments</li>
             <li>What is "digitized" here is a cognitive process, not a text corpus — there is no shareable dataset, no reproducible pipeline independent of my specific notes and thinking</li>
-            <li>The system may reinforce existing thinking rather than extend it — if the wiki only structures what I have already reasoned through, the output risks becoming an echo chamber with no genuinely new critical moves; how to build more intellectual friction into the <code>/exam</code> mode is an open problem still being worked on</li>
+            <li>The system may reinforce existing thinking rather than extend it — this is partly structural: <code>AGENTS.md</code> requires that all scholarly positions come directly from note content, never inferred from general knowledge, which prevents hallucination but also creates a closed system where AI can only surface connections already implicit in what the researcher has written. A possible direction: keep the strict rule for wiki content, but allow a clearly-labeled "not from your notes — worth checking" mode in conversation, so the two layers don't collapse into each other. How to open the system without losing source integrity is an open problem still being worked on.</li>
           </ul>
         </li>
       </ul>
